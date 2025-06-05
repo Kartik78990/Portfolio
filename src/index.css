@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background text-text-primary font-sans antialiased;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+.noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+}
+
+.gradient-blur {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  background: radial-gradient(circle, rgba(126, 116, 241, 0.15) 0%, rgba(0, 212, 255, 0.1) 50%, transparent 70%);
+  filter: blur(100px);
+  z-index: -5;
+  pointer-events: none;
+}
+
+.custom-cursor {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #7E74F1;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+  z-index: 9999;
+}
+
+.custom-cursor.hover {
+  width: 40px;
+  height: 40px;
+  background-color: #00D4FF;
+}
+
+.hidden-content {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.revealed {
+  opacity: 1;
+}
+
+@layer components {
+  .hover-trigger {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  
+  .hover-trigger::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300;
+  }
+  
+  .hover-trigger:hover::after {
+    @apply w-full;
+  }
+  
+  .nav-link {
+    @apply relative py-1 px-2 text-text-secondary hover:text-text-primary transition-colors duration-300;
+  }
+  
+  .nav-link.active {
+    @apply text-text-primary;
+  }
+  
+  .nav-link.active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-primary;
+  }
+  
+  .secret-text {
+    @apply opacity-0 absolute transition-opacity duration-500;
+  }
+  
+  .button {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 relative overflow-hidden;
+  }
+  
+  .button-primary {
+    @apply bg-primary text-white hover:bg-primary-600;
+  }
+  
+  .button-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+}
