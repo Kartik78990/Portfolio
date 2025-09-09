@@ -48,6 +48,23 @@ export const skills: Skill[] = [
     level: 70,
     category: 'other',
     icon: 'graphql'
-  }
-  
+  },
+  {
+    name: 'Node.js',
+    level: 60,
+    category: 'Backend',
+    icon: 'nodejs'
+  },
+  {
+    name: 'Express',
+    level: 40,
+    category: 'Backend',
+    icon: 'express'
+  },
+  {
+    name: 'Sequelize',
+    level: 50,
+    category: 'Backend',
+    icon: 'sequelize'
+  },
 ];
