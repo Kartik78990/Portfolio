@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { skills } from '../data/skills';
-import { Code, Palette, MoreHorizontal } from 'lucide-react';
+import { Code, Palette, MoreHorizontal, Database } from 'lucide-react';
 
 const About: React.FC = () => {
   const categories = [
     { name: 'frontend', icon: <Code className="w-5 h-5" />, label: 'Frontend' },
     { name: 'design', icon: <Palette className="w-5 h-5" />, label: 'Design' },
     { name: 'other', icon: <MoreHorizontal className="w-5 h-5" />, label: 'Other' },
+    { name: 'Backend', icon: <Database className="w-5 h-5" />, label: 'Backend' },
   ];
 
   return (
