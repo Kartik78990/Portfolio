@@ -41,12 +41,12 @@ const About: React.FC = () => {
             <h3 className="text-2xl font-bold mb-6 text-primary">My Story</h3>
             <div className="space-y-4 text-text-secondary">
               <p>
-                I'm a creative technologist with 8+ years of experience building digital products and interactive experiences. 
-                I specialize in frontend development, with a strong focus on creating engaging, accessible, and performant user interfaces.
+               I am a passionate and versatile Full Stack Developer with expertise in the MERN stack and C++, driven by a love for building innovative and efficient web applications. 
+                My journey in tech has been fueled by curiosity and a desire to solve real-world problems through clean, scalable, and interactive code.
               </p>
               <p>
-                I believe in the power of technology to transform ideas into impactful solutions. My approach combines technical excellence 
-                with creative problem-solving, always keeping the end user at the center of the design process.
+                Beyond coding, I thrive on organizing events and bringing creative ideas to life. 
+                Whether it’s coordinating a tech meetup, planning a workshop, or designing a unique project showcase, I enjoy blending technical precision with creativity to create experiences that leave an impact.
               </p>
               <p>
                 When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
