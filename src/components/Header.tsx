@@ -68,7 +68,7 @@ const Header: React.FC = () => {
             onClick={handleLogoClick}
             id="logo"
           >
-            <span className="text-primary font-MyFont">Kartik</span>
+            <span className="text-primary font-MyFont">Kartik Pundir</span>
           </div>
 
           {/* Desktop Navigation */}
